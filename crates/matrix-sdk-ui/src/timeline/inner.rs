@@ -61,14 +61,15 @@ use super::{
         update_read_marker, Flow, HandleEventResult, TimelineEventHandler, TimelineEventKind,
         TimelineEventMetadata, TimelineItemPosition,
     },
+    item::{new_timeline_item, timeline_item},
     reactions::ReactionToggleResult,
-    rfind_event_by_id, rfind_event_item, timeline_item,
+    rfind_event_by_id, rfind_event_item,
     traits::RoomDataProvider,
     AnnotationKey, EventSendState, EventTimelineItem, InReplyToDetails, Message, Profile,
     RelativePosition, RepliedToEvent, TimelineDetails, TimelineItem, TimelineItemContent,
     TimelineItemKind,
 };
-use crate::{events::SyncTimelineEventWithoutContent, timeline::new_timeline_item};
+use crate::events::SyncTimelineEventWithoutContent;
 
 #[derive(Clone, Debug)]
 pub(super) struct TimelineInner<P: RoomDataProvider = room::Common> {
