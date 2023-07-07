@@ -33,3 +33,6 @@ fn init_logging() {
         .with(tracing_subscriber::fmt::layer().with_test_writer())
         .init();
 }
+
+#[cfg(feature = "experimental-uniffi")]
+uniffi::setup_scaffolding!();

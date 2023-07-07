@@ -11,9 +11,10 @@ e2e-encryption = ["matrix-sdk/e2e-encryption"]
 native-tls = ["matrix-sdk/native-tls"]
 rustls-tls = ["matrix-sdk/rustls-tls"]
 
-experimental-room-list = ["experimental-sliding-sync", "dep:async-stream", "dep:eyeball-im-util"]
 experimental-encryption-sync = ["experimental-sliding-sync", "dep:async-stream"]
+experimental-room-list = ["experimental-sliding-sync", "dep:async-stream", "dep:eyeball-im-util"]
 experimental-sliding-sync = ["matrix-sdk/experimental-sliding-sync"]
+experimental-uniffi = ["dep:uniffi"]
 
 testing = ["dep:eyeball-im-util"]
 
@@ -43,6 +44,7 @@ serde_json = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }
 tracing = { workspace = true, features = ["attributes"] }
+uniffi = { workspace = true, optional = true }
 
 [dev-dependencies]
 anyhow = { workspace = true }

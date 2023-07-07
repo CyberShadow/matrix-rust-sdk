@@ -796,6 +796,7 @@ fn find_read_marker(items: &Vector<Arc<TimelineItem>>) -> Option<usize> {
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "experimental-uniffi", derive(uniffi::Enum))]
 pub enum BackPaginationStatus {
     Idle,
     Paginating,

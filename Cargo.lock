@@ -2967,6 +2967,7 @@ dependencies = [
  "tokio",
  "tracing",
  "tracing-subscriber",
+ "uniffi",
  "wiremock",
 ]
 
